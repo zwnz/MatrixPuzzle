@@ -4,7 +4,6 @@
  */
 
 #include <iostream>
-#include <conio.h>
 #include <iomanip>
 
 using namespace std;
@@ -16,9 +15,10 @@ int main()
     cin >> n;
     cout << endl;
 
-    int output[n][n] = {0};         //定义一个二维数组用来输出
+    int output[n][n];               //定义一个二维数组用来输出
     int min = 0,max = 0;            //改变传入值的上下界
     int k = 1;                      //传入值
+    memset(output, 0, sizeof(output));
 
     for(int i = 0; i < n; i++){     //定义横坐标
         if(i >= n / 2){             //对传入值上下界做判断
@@ -46,6 +46,6 @@ int main()
         cout << endl;
     }
 
-    getch();
+    cin.ignore().get();
     return 0;
 }
