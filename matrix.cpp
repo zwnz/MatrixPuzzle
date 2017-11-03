@@ -1,18 +1,40 @@
-// è¯´æ˜Žï¼š
-// è¯·æ³¨æ„ï¼Œæœ¬ä»£ç ä»…ä½œä¸ºç¤ºä¾‹ï¼Œä¸¥ç¦ä½¿ç”¨ç±»ä¼¼æ–¹æ³•ç¼–å†™ç¨‹åºã€‚
-// ä»»åŠ¡è¯´æ˜Žï¼šè¯·ç¼–å†™ N=5ï¼ŒN=10ï¼ŒN=15 çš„æƒ…å†µ
-// ä»»åŠ¡å¼€å§‹æ—¥æœŸï¼š2017å¹´10æœˆ27æ—¥
-// ä»»åŠ¡æˆªæ­¢æ—¥æœŸï¼š2017å¹´11æœˆ10æ—¥
 #include <iostream>
 using namespace std;
-
-int main() {
-    cout << "1 1 1 1 1" << endl;
-    cout << "1 2 2 2 1" << endl;
-    cout << "1 2 3 2 1" << endl;
-    cout << "1 2 2 2 1" << endl;
-    cout << "1 1 1 1 1" << endl;
+int main()
+ {
+    int N;
+    cout<<"N=";
+    cin>>N;
+    int a[N+1][N+1];//Êý×éÏÂ±ê´ÓÁã¼ÆËã
+    int row,column,n,k,t,i,j,p;
+    row=0;//ÅÅ
+    column=1;//ÁÐ
+    n=N;//´ú±í¸ñÊ½µÄÊý×Ö
+    t=1;//¸³Öµ·½Ïò
+    k=0;//·´Õý¾ÍÊÇÁ½ÂÖÒÔºóÒ²¾ÍÊÇÒ»È¦¸³ÖµÍêÈÃp¼ÓÒ»µÄ±äÁ¿Ã¿Ò»È¦µÄÊý×Ö
+    for(p=1;p<=N/2;)
+    {
+        if(k!=0&&k%2==0)p++;//´ÓÍâÍùÄÚÒ»È¦Ò»È¦µÄ¸³Öµ
+    for(i=1;i<=n;i++)
+    {
+        row+=t;
+    a[row][column]=p;
+    }//¸øÒ»ÁÐ¸³Öµ
+     n--;//ÁÐÊý¼õÒ»
+     for(j=1;j<=n;j++)
+     {
+         column+=t;
+         a[row][column]=p;
+     }//¸øÐÐ¸³Öµ
+    k++;
+    t=-t;//»»Ò»¸ö·½Ïò¸³Öµ
+    };
+    for(i=1;i<=N;++i)//Êä³ö
+    {
+        for(j=1;j<=N;++j)
+            cout<<' '<<a[i][j];
+            cout<<endl;
+    }
     return 0;
+
 }
-
-
