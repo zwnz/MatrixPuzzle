@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
 	int b=1,N;
-	cout<<"ÊäÈëN£º";
+	cout<<"è¾“å…¥Nï¼š";
 	cin>>N;
 	int **number=new int *[N];
 	for(int t=0;t<N;t++)
